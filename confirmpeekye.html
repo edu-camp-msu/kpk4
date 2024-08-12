@@ -71,10 +71,11 @@
         // ปิด SweetAlert loading
         Swal.close();
 
-        if (found && found[13] === "ผ่านการคัดเลือกให้เป็นพี่ค่าย") {
-            const name = found[9]; // คอลัมน์ L: ชื่อ-นามสกุล
+        if (found && found[9] === "ผ่านการคัดเลือกให้เป็นพี่ค่าย") {
+            const name = found[2]; // คอลัมน์ C: ชื่อ-นามสกุล
             const nickname = found[3]; // คอลัมน์ D: ชื่อเล่น
-            const position = found[10]; // คอลัมน์ F: สายงานที่ผ่านการคัดเลือก
+            const position = found[8]; // คอลัมน์ I: สายงานที่ผ่านการคัดเลือก
+            const email = found[10]; // คอลัมน์ K คือ อีเมล  
             const confirmationLink = found[12]; // คอลัมน์ M: ลิงก์ยืนยันสิทธิ์
 
             Swal.fire({
@@ -83,6 +84,7 @@
                     <p><strong>ชื่อ-นามสกุล:</strong> ${name}</p>
                     <p><strong>ชื่อเล่น:</strong> ${nickname}</p>
                     <p><strong>สายงานที่ผ่านการคัดเลือก:</strong> ${position}</p>
+                    <p><strong>email ที่ต้องใช้ในการยืนยันสิทธิ์:</strong> ${email}</p>
                 `,
                 icon: 'success',
                 confirmButtonText: 'ยืนยันสิทธิ์ (Google form)',
