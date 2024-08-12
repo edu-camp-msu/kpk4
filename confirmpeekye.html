@@ -46,6 +46,12 @@
     </div>
 
     <script>
+        document.getElementById('studentId').addEventListener('keydown', function(event) {
+        if (event.key === ' ') {
+            event.preventDefault();
+        }
+    });
+        
         async function checkSelection() {
     const studentId = document.getElementById('studentId').value;
     const apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1QL94OOKAcLgZJKYu_2H0DIKVrZtXDyQf56Im4MIHJ14/values/confirmpeekye?alt=json&key=AIzaSyCqACrd7PlasdViCaPiJpv_2acct-efmdE';
