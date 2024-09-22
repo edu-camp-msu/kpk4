@@ -54,7 +54,7 @@
         
     async function checkSelection() {
     const studentId = document.getElementById('studentId').value;
-    const apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1QL94OOKAcLgZJKYu_2H0DIKVrZtXDyQf56Im4MIHJ14/values/testconfirmnongkye?alt=json&key=AIzaSyCqACrd7PlasdViCaPiJpv_2acct-efmdE';
+    const apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1QL94OOKAcLgZJKYu_2H0DIKVrZtXDyQf56Im4MIHJ14/values/confirmnongkye?alt=json&key=AIzaSyCqACrd7PlasdViCaPiJpv_2acct-efmdE';
 
     Swal.fire({
         title: 'กำลังโหลดข้อมูล...',
@@ -70,16 +70,16 @@
         const data = await response.json();
         const rows = data.values.slice(1); 
 
-        const found = rows.find(row => row[0] === studentId); //รอแก้ไข
+        const found = rows.find(row => row[5] === studentId); //รอแก้ไข
 
         Swal.close();
 
-        if (found && found[6] === "ผ่านการคัดเลือกให้เป็นน้องค่าย") {  //รอแก้ไข
-            const name = found[1];  //รอแก้ไข
-            const nickname = found[2];  //รอแก้ไข
-            const school = found[3];  //รอแก้ไข
-            const province = found[4];  //รอแก้ไข
-            const confirmationLink = found[5];  //รอแก้ไข
+        if (found && found[30] === "ผ่าน") {  //รอแก้ไข
+            const name = found[4];  //รอแก้ไข
+            const nickname = found[28];  //รอแก้ไข
+            const school = found[31];  //รอแก้ไข
+            const province = found[9];  //รอแก้ไข
+            const confirmationLink = found[32];  //รอแก้ไข
 
             Swal.fire({
                 title: 'ยินดีด้วย คุณผ่านการคัดเลือกให้เป็นน้องค่าย KPK4',
