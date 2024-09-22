@@ -70,7 +70,7 @@
         const data = await response.json();
         const rows = data.values.slice(1); 
 
-        const found = rows.find(row => row[5] === studentId); //รอแก้ไข
+        const found = rows.find(row => row[4] === studentId); //รอแก้ไข
 
         Swal.close();
 
