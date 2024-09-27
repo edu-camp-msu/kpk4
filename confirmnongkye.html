@@ -54,7 +54,7 @@
         
      async function checkSelection() {
         const studentId = document.getElementById('studentId').value;
-        const apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1QL94OOKAcLgZJKYu_2H0DIKVrZtXDyQf56Im4MIHJ14/values/error?alt=json&key=AIzaSyCqACrd7PlasdViCaPiJpv_2acct-efmdE';
+        const apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1QL94OOKAcLgZJKYu_2H0DIKVrZtXDyQf56Im4MIHJ14/values/ชีต6?alt=json&key=AIzaSyCqACrd7PlasdViCaPiJpv_2acct-efmdE';
 
         Swal.fire({
             title: 'กำลังโหลดข้อมูล...',
@@ -81,7 +81,7 @@
                 const province = found[7];
                 const confirmationLink = found[4];
 
-                if (found[5] === "ผ่าน") {
+                if (found[5] === "ผ่านการคัดเลือกสำรอง") {
                     Swal.fire({
                         title: 'ยินดีด้วย คุณผ่านการคัดเลือกให้เป็นน้องค่าย KPK4',
                         html: `
